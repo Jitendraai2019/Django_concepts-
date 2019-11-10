@@ -1,0 +1,16 @@
+<h1>There are {{count}} words in the textarea.</h1>
+<!--    It is a key of the dictionary from the views.py count method. -->
+
+<a href="{% url 'home' %}">Start again</a>
+
+<h1>Your Text:</h1>
+ {{fulltext}}
+
+<h1>Word Count:</h1>
+
+{% for word,count_total in sorted_dictionary %}
+
+  {{word}} --> {{ count_total}}
+  <br/>
+
+{% endfor %}
